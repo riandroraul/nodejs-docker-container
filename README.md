@@ -17,7 +17,17 @@ A boilerplate for building Node.js (Express) APIs with Docker, featuring:
 ### 1. Clone and setup
 
 ```bash
-git clone [your-repo-url]
-cd your-repo
-cp .env.example .env  # Update with your values
+git clone https://github.com/riandroraul/nodejs-docker-container
+```
+
+```bash
+cd nodejs-docker-container
+```
+
+```bash
+docker-compose build
+```
+
+```bash
+docker-compose up
 ```
