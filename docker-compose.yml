@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  api:
+    build: .
+    ports:
+      - "3000:3000" # Port aplikasi
+      - "9229:9229" # Port debugging
+    volumes:
+      - ./:/usr/src/app # Mount direktori lokal untuk development
+      - /usr/src/app/node_modules # Hindari mount node_modules
+    environment:
+      - NODE_ENV=development
+    command: nodemon --inspect=0.0.0.0:9229 app.js
